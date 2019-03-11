@@ -1,0 +1,192 @@
+﻿@model WebApplication1.ViewModels.RegisterViewModel
+@{
+    ViewData["Title"] = "Add Employee";
+}
+<html>
+<head>
+    @ViewData["Title"]
+</head>
+
+<body>
+    <form asp-controller="Account" asp-action="Register" method="post">
+
+        <fieldset>
+
+            <div>
+
+                <div>
+                    <label asp-for="FirstName">First Name </label>
+                    <input asp-for="FirstName" />
+                    <span asp-validation-for="FirstName"></span>
+                </div>
+
+
+                <div>
+                    <label asp-for="MiddleName">Middle Name</label>
+                    <input asp-for="MiddleName" />
+                    <span asp-validation-for="MiddleName"></span>
+                </div>
+
+
+                <div>
+                    <label asp-for="LastName">Last Name </label>
+                    <input asp-for="LastName" />
+                    <span asp-validation-for="LastName"></span>
+                </div>
+
+            </div>
+
+
+            <div>
+                <div>
+                    <label asp-for="Dob">Date of birth</label>
+                    <input asp-for="Dob" />
+                    <span asp-validation-for="Dob"></span>
+                </div>
+            </div>
+
+
+
+            <div>
+                <div>
+                    <label asp-for="StreetNumber">Street Number</label>
+                    <input asp-for="StreetNumber" />
+                    <span asp-validation-for="StreetNumber"></span>
+                </div>
+
+                <div>
+                    <label asp-for="StreetName">Street Name</label>
+                    <input asp-for="StreetName" />
+                    <span asp-validation-for="StreetName"></span>
+                </div>
+
+
+                <div>
+                    <label asp-for="City">City</label>
+                    <input asp-for="City" />
+                    <span asp-validation-for="City"></span>
+                </div>
+
+
+                <div>
+                    <label asp-for="ZipCode">Zip Code</label>
+                    <input asp-for="ZipCode" />
+                    <span asp-validation-for="ZipCode"></span>
+                </div>
+
+            </div>
+
+            <div>
+                <div>
+                    <label asp-for="SSN">Social Security Number</label>
+                    <input asp-for="SSN" />
+                    <span asp-validation-for="SSN"></span>
+                </div>
+
+
+                <div>
+                    <label asp-for="SsnConfirm">Confirm Social Security Number</label>
+                    <input asp-for="SsnConfirm" />
+                    <span asp-validation-for="SsnConfirm"></span>
+                </div>
+
+            </div>
+
+            <div>
+                <div>
+                    <label asp-for="RoleToBeAssigned">Job Title</label>
+                    <select asp-for="RoleToBeAssigned" asp-items="Model.EmployeeRoles"> </select>
+                    <span asp-validation-for="RoleToBeAssigned"></span>
+                </div>
+            </div>
+
+
+            <div>
+                <div>
+                    <label asp-for="LicNumber">License Number</label>
+                    <input asp-for="LicNumber" />
+                    <span asp-validation-for="LicNumber"></span>
+                </div>
+
+
+                <div>
+                    <label asp-for="LicIssue">License Issuance Date</label>
+                    <input asp-for="LicIssue" />
+                    <span asp-validation-for="LicIssue"></span>
+                </div>
+
+
+                <div>
+                    <label asp-for="LicExpire">License Expiration date</label>
+                    <input asp-for="LicExpire" />
+                    <span asp-validation-for="LicExpire"></span>
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div>
+                    <label asp-for="MedCardNumber">Medical Card Number</label>
+                    <input asp-for="MedCardNumber" />
+                    <span asp-validation-for="MedCardNumber"></span>
+                </div>
+
+                <div>
+                    <label asp-for="MedIssue">Medical Card Issuance Date</label>
+                    <input asp-for="MedIssue" />
+                    <span asp-validation-for="MedIssue"></span>
+                </div>
+
+                <div>
+                    <label asp-for="MedExpire">Medical Card Expiration Date</label>
+                    <input asp-for="MedExpire" />
+                    <span asp-validation-for="MedExpire"></span>
+                </div>
+
+            </div>
+
+            <div>
+
+                <div>
+                    <label asp-for="UserName">User Name</label>
+                    <input asp-for="UserName" />
+                    <span asp-validation-for="UserName"></span>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div>
+                    <label asp-for="Password">Password</label>
+                    <input asp-for="Password" />
+                    <span asp-validation-for="Password"></span>
+                </div>
+
+                <div>
+                    <label asp-for="ConfPassword">Password</label>
+                    <input asp-for="ConfPassword" />
+                    <span asp-validation-for="ConfPassword"></span>
+                </div>
+
+            </div>
+
+
+            <div>
+                <div>
+                    <input type="submit" value="Register" />
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+
+
+
+
+</body>
+</html>

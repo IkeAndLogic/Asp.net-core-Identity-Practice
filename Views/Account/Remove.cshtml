@@ -1,0 +1,16 @@
+﻿@model WebApplication1.ViewModels.RemoveViewModel
+
+    <form asp-controller="Account" asp-action="Remove" method="post">
+       
+            @foreach (var item in Model.User)
+            {
+            <div>
+                <label> @item.FirstName @item.LastName</label>
+            <input type="checkbox"value=@item.Id/>
+            </div>
+            }
+        
+       
+        <input type="submit" value=" Remove User" /><br>
+
+    </form>
